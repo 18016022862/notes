@@ -1,4 +1,4 @@
-﻿手机浏览器打开微信：href="javascript:window.location.href='weixin://'"
+手机浏览器打开微信：href="javascript:window.location.href='weixin://'"
 微信公众号api：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
 
 css currentColor:是 color 属性的值，具体意思是指：currentColor关键字的使用值是 color 属性值的计算值。
@@ -304,6 +304,10 @@ cookie 简单，但可能不支持，可能被伪造
 input type="hidden" 简单，可能被伪造
 url参数 简单，显示于地址栏，长度有限
 
+Cookie信息存放在客户端(大小限制4K，只能存放string类型，不安全，但可以考虑使用加密和验证);
+Session信息在服务器端(安全性好，占服务器资源，除InProc方式存放的对象需要可序列化);
+临时Cookie和永久Cookie，Session的三种存放方式(InProc、StateServer、SQLServer)
+
 .net Struct(结构)和Class(类)区别：
 Struct(结构)：属于值类型，值类型是在堆栈上面分配内存，所以所有的基类型（值类型）都是结构类型。
 类是引用类型：引用类型在堆上分配地址。
@@ -327,3 +331,18 @@ IRequiresSessionState接口：标记程序中是否可以使用session；
 http（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式
 
 C# 使用SqlBulkCopy类批量复制大数据,将内存中的数据表直接的一次性的存储到数据库中
+递归算法
+public static int Func(int n)
+{
+    if (n < 0)
+    {
+        throw new ArgumentException("不能小于0");        
+    }
+
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+
+    return n * Func(n - 1);
+}
