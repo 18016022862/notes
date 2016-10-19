@@ -105,9 +105,43 @@
 # a=calc(*t)
 # print a
 
-def person(name,age,**kw):
-    print 'name:',name,'age:',age,'other:',kw
+#关键字参数
+# def person(name,age,**kw):
+    # print 'name:',name,'age:',age,'other:',kw
 
-person('zhangsanfeng',20,sex='man') 
+# person('zhangsanfeng',20,sex='man')
+
+#递归函数
+# def fn(n=1):
+    # if n<=1:
+        # return 1
+    # else:
+        # return fn(n-1)*(n)
+# print fn(1000) #栈溢出
+# print fn(0)
+
+# def fn(n,p):
+    # if n<=1:
+        # return p
+    # else:
+        # return fn(n-1,n*p)
+# def fn_iter(m):
+    # return fn(m,1)
+	
+# print fn_iter(1000)
+
+#汉诺塔实现
+def move_to(fromm,to):
+    print (fromm,'->',to)
+
+def move(n,a,b,c):
+    if n==1:
+        move_to(a,c)
+    else:
+        move(n-1,a,b,c)
+        move_to(a,c)
+        move(n-1,c,a,b)
+
+move(3,'A','B','C')
 
 
