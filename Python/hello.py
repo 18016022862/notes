@@ -108,6 +108,6 @@
 def person(name,age,**kw):
     print 'name:',name,'age:',age,'other:',kw
 
-person('zhangsanfeng',20,sex='man')
+person('zhangsanfeng',20,sex='man') 
 
 
