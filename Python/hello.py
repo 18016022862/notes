@@ -131,17 +131,19 @@
 # print fn_iter(1000)
 
 #汉诺塔实现
-def move_to(fromm,to):
-    print (fromm,'->',to)
+# def move_to(fromm,to):
+    # print (fromm,'->',to)
 
-def move(n,a,b,c):
-    if n==1:
-        move_to(a,c)
-    else:
-        move(n-1,a,b,c)
-        move_to(a,c)
-        move(n-1,c,a,b)
+# def move(n,a,b,c):
+    # if n==1:
+        # move_to(a,c)
+    # else:
+        # move(n-1,a,b,c)
+        # move_to(a,c)
+        # move(n-1,c,a,b)
 
-move(3,'A','B','C')
+# move(3,'A','B','C')
+
+
 
 

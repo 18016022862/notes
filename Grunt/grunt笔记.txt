@@ -1,0 +1,7 @@
+命令行：npm update -g npm --更新npm
+
+安装CLI：
+	命令行：npm install -g grunt-cli --全局变量
+	
+安装Grunt插件：
+	命令行：npm install grunt --save-dev

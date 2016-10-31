@@ -115,13 +115,22 @@ nodejs教程：http://ourjs.com/detail/529ca5950cb6498814000005
    3.命令行进入Express项目所在路径，输入命令:$ npm install --save Mongoose,等待一段时间，Package.json已经加入Mongoose版本信息。
 
 Mongo：
-1.show dbs ---显示所有数据库
-2.use legend ---使用当前数据库
-  2.1 db.legend.find()---查找所有数据
-  2.2 db.legend.remove({})---参数必传，删除当前库下面的所有数据
-3.show collections ---显示所有当前库下面的表
-  3.1 db.users.find()---查找所有数据
-  3.2 db.users.remove({})---参数必传，删除当前库下面的所有数据
+1.安装Mongodb文件到本地，命令行进入到安装目录下面的bin文件夹，运行命令：$ mongod.exe --dbpath d:/data/db(事先新建好指定文件夹)
+2.创建Mongodb服务，命令行进入对应目录，运行：
+	$ mongod.exe --dbpath d:/data/db --install 
+	$ mongod.exe --dbpath d:/data/log/log.log --install
+	$ net start mongod
+3.命令行进入对应目录，运行：
+	$ mongo
+3.show dbs ---显示所有数据库
+4.use legend ---使用当前数据库
+  4.1 db.legend.insert({uid:001,uname:'zhangsan',age:10})---插入数据
+  4.2 db.legend.find()---查找所有数据 db.legend.find({uid:001})--按条件查找
+  4.3 db.legend.update({uid:001},{$set:{age:25}})---更新数据，参数1为条件，参数2为更改的值
+  4.4 db.legend.remove({uid:001})---参数必传，参数为{}：全部删除，参数有值：按条件删除
+5.show collections ---显示所有当前库下面的表
+  5.1 db.users.find()---查找所有数据
+  5.2 db.users.remove({})---参数必传，删除当前库下面的所有数据
   
  npm run start >>app.log 终端输入此命令，生成app.log文件；
 
